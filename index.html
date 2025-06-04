@@ -26,6 +26,8 @@
   max-width: 400px;         /* 大きくなりすぎないよう制限 */
   height: 60vw;
   max-height: 600px;
+  overflow: hidden;
+  box-sizing: border-box;
   perspective: 1000px;
 }
 
@@ -55,9 +57,10 @@
   height: 100%;
   border: none;
   pointer-events: none; /* 重要: iframe がクリックを遮らないように */
+  display: block;
 }
-    
-@media (max-width: 768px) {
+
+@media (max-width: 600px) {
   .album-container {
     flex-direction: column;
     align-items: center;
