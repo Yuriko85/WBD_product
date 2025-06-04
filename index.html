@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head> 
+<head> <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8"> 
   <title>HTMLページめくり</title>
   <style> 
@@ -14,14 +14,18 @@
   }
 
 .album-container {
-   display: flex;
-    gap: 20px; /* 隙間を調整（お好みで） */
-   }
+  display: flex;
+ /* flex-wrap: wrap;   */      /* 横幅が足りないとき自動折り返し */
+  justify-content: center;
+  gap: 16px;
+  padding: 1rem;
+}
 
 .page-stack {
-  position: relative;
-  width: 400px;
-  height: 600px;
+  width: 90vw;              /* スマホでは画面幅の90% */
+  max-width: 400px;         /* 大きくなりすぎないよう制限 */
+  height: 60vw;
+  max-height: 600px;
   perspective: 1000px;
 }
 
